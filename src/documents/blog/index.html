@@ -9,12 +9,15 @@ navGroups: primary
 <p>Babiš odvolal ředitele Úřadu pro zastupování státu ve věcech majetkových Františka Dittricha.</p>
 <p>Řecký premiér Tsipras představil svou vládu. A hned volal s výhradami do Bruselu. Vůdce levicové strany Syriza se na zformování kabinetu dohodl s pravicí Nezávislí Řekové.</p>
 
-<%# console.log @ %>
+<% console.log @ %>
 
 <ul>
 <% for article in @articles: %>
-    <li class="nav__item"><a href="<%= article.path %>"><%= if article.title instanceof Array then article.title[0] else article.title %></a><% console.log article.path %><br>
-        <%= article.path %>
+    <li class="nav__item"><a href="<%= article.url %>"><%= if article.title instanceof Array then article.title[0] else article.title %></a><br>
+        <%= article.url %>
+        <% console.log '+++' %>
+        <% console.log article.url %>
+        <% console.log article.slug %>
     </li>
 <% end %>
 </ul>

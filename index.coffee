@@ -1,6 +1,6 @@
-##
-# @author David Sklar
-#
+###*
+ * @author David Sklar
+###
 
 'use strict'
 
@@ -12,14 +12,13 @@ require 'coffee-script/register'
 
 path = require 'path'
 
-Metalsmith  = require 'metalsmith'
+metalsmith  = require 'metalsmith'
 collections = require 'metalsmith-collections'
-templates   = require 'metalsmith-in-place'
 layouts     = require 'metalsmith-layouts'
 markdown    = require 'metalsmith-markdown'
 navigation  = require 'metalsmith-navigation'
-# path        = require 'metalsmith-path'
 serve       = require 'metalsmith-serve'
+templates   = require 'metalsmith-in-place'
 watch       = require 'metalsmith-watch'
 
 
@@ -27,16 +26,20 @@ watch       = require 'metalsmith-watch'
 # =================================
 # Run
 
-Metalsmith __dirname
+### Inline comment A ###
+`// Inline comment B`
+
+metalsmith __dirname
     .source('src/documents')
-    # .use path()
+    .use markdown()
     .use collections(
-        articles: {
+        all:
+            pattern: '**/*'
+            refer: false
+        articles:
             pattern: 'blog/**/!(index.*)'
             refer: false
-        }
     )
-    .use markdown()
     .use(
         (files, metalsmith, done) ->
             setImmediate(done)
@@ -48,15 +51,16 @@ Metalsmith __dirname
                     #     return
                     # }
 
-                    data = files[file]
-                    # data.path = path.join(path.dirname(file), path.basename(file, path.extname(file)))
-                    data.path = path.join(path.dirname(file), path.basename(file))
+                    metadata = files[file]
+                    # metadata.path = path.join(path.dirname(file), path.basename(file, path.extname(file)))
+                    metadata.basename = path.basename(file).replace('index.html', '')
+                    metadata.url = path.join(path.dirname(file), path.basename(file))
+                    metadata.url = metadata.url.replace('index.html', '')
                     return
                 )
             # done()
             return
     )
-
     .use templates(
         engine: 'eco'
     )
@@ -80,10 +84,6 @@ Metalsmith __dirname
     .build (err) ->
         if (err)
             throw err
-
-
-
-
 
 
 

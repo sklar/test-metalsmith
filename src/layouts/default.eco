@@ -17,6 +17,16 @@
             <h1 class="page__head__logo">Metalsmith sandbox</h1>
 
             <nav role="navigation">
+                <ul>
+                <% for article in @all: %>
+                    <li class="nav__item"><a href="<%= article.url %>"><%= if article.title instanceof Array then article.title[0] else article.title %></a><br>
+                        <%= article.url %><br>
+                        <% console.log '-------------------------' %>
+                        <% console.log article.title %>
+                        <% console.log article.url %>
+                    </li>
+                <% end %>
+                </ul>
             </nav>
         </header>
 
