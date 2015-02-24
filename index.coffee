@@ -44,21 +44,22 @@ metalsmith __dirname
         (files, metalsmith, done) ->
             setImmediate(done)
             # console.log files
-            Object
-                .keys(files)
-                .forEach((file) ->
-                    # if (!/\.html/.test(path.extname(file))) {
-                    #     return
-                    # }
+            # console.log Object.keys(files)
 
-                    metadata = files[file]
-                    # metadata.path = path.join(path.dirname(file), path.basename(file, path.extname(file)))
-                    metadata.basename = path.basename(file).replace('index.html', '')
-                    metadata.url = path.join(path.dirname(file), path.basename(file))
-                    metadata.url = metadata.url.replace('index.html', '')
-                    return
-                )
-            # done()
+            Object.keys(files).forEach((key) ->
+                # console.log files[file].title
+
+                # metadata.path = path.join(path.dirname(file), path.basename(file, path.extname(file)))
+                files[key].url = path.normalize('/' + key.replace('index.html', '/'))
+
+
+                # metadata.url = metadata.url.replace('index.html', '')
+
+                # console.log key
+                # console.log files[key].url
+
+                return
+            )
             return
     )
     .use templates(
