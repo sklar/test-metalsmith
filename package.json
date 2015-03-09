@@ -1,13 +1,31 @@
 {
   "name": "test-metalsmith",
   "version": "0.1.0",
-  "description": "Metalsmith sandbox",
+  "description": "Metalsmith",
   "engines": {
     "node": ">= 0.10.0"
   },
   "main": "index.js",
+  "scripts": {
+    "start": "grunt build && grunt connect",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "coffee-script": "^1.9.0",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-hashres": "^0.4.1",
+    "grunt-newer": "^1.1.0",
+    "grunt-sass": "^0.18.1",
+    "grunt-shell": "^1.1.2",
+    "jit-grunt": "^0.9.1",
+    "load-grunt-config": "^0.16.0",
     "metalsmith": "^1.3.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-define": "^1.0.0",
@@ -16,12 +34,12 @@
     "metalsmith-layouts": "^1.0.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-navigation": "^0.1.0",
-    "metalsmith-permalinks": "^0.4.0",
     "metalsmith-publish": "^0.1.3",
     "metalsmith-serve": "0.0.3",
     "metalsmith-tags": "^0.6.1",
-    "metalsmith-watch": "^0.2.0"
+    "metalsmith-watch": "^0.2.0",
     "swig": "^1.4.2",
     "swig-lodash": "^1.2.1",
+    "time-grunt": "^1.1.0"
   }
 }
