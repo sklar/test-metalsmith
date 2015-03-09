@@ -19,5 +19,3 @@ node_modules
 # files
 # wildcard `/folder/**/*.abc` works since git 1.8.4 (msysgit 1.8.2)
 # see http://goo.gl/wo6TlD
-index.js
-gulpfile.js

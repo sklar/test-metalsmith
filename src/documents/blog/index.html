@@ -1,6 +1,8 @@
 ---
 title: Blog
-navGroups: primary
+navGroups:
+    - primary
+navOrder: 2
 ---
 
 <h1>Blog</h1>
@@ -10,13 +12,12 @@ navGroups: primary
 <p>Řecký premiér Tsipras představil svou vládu. A hned volal s výhradami do Bruselu. Vůdce levicové strany Syriza se na zformování kabinetu dohodl s pravicí Nezávislí Řekové.</p>
 
 
-
 <ul>
-<% for article in @articles: %>
-    <li class="nav__item"><a href="<%= article.url %>"><%= if article.title instanceof Array then article.title[0] else article.title %></a><br>
-        <%= article.url %>
+{% for article in articles %}
+    <li class="nav__item"><a href="{{ article.url }}">{% if article.title|isArray %}{{ article.title[0] }}{% else %}{{ article.title }}{% endif %}</a><br>
+        {{ article.url }}
     </li>
-<% end %>
+{% endfor %}
 </ul>
 
 
