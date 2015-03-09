@@ -1,7 +1,6 @@
 ---
 title: Silnější dolar už se projevuje v českých obchodech
-tags:
-    - dolar
+tags: dolar
 ---
 
 - V e-shopech s elektronikou se už zvýšily ceny některých výrobků, konkrétně součástek do počítačů.

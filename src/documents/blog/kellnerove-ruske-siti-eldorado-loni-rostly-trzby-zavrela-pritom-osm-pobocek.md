@@ -1,8 +1,6 @@
 ---
 title: Kellnerově ruské síti Eldorado loni rostly tržby
-tags:
-    - kellner
-    - eldorado
+tags: kellner, eldorado
 ---
 
 - Největší ruské síti obchodů s elektronikou a domácími spotřebiči Eldorado loni vzrostly tržby o 16,2 procenta.

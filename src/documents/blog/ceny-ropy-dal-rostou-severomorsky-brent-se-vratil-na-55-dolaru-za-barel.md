@@ -1,9 +1,8 @@
 ---
-title: Ceny ropy dál rostou. Severomořský Brent se vrátil na 55 dolarů za barel
-tags:
-    - oil
-    - brent
-    - dolar
+title:
+    - Ceny ropy dál rostou. Severomořský Brent se vrátil na 55 dolarů za barel
+    - Světové ceny ropy dál silně rostou a severomořská ropa Brent se vrátila nad 55 dolarů za barel.
+tags: oil, brent, dolar
 ---
 
 - Cena severomořské ropy Brent stoupla o více než dva dolary. Americká lehká ropa WTI posílila na 49,74 dolaru.
