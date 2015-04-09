@@ -8,6 +8,7 @@ module.exports = (grunt) ->
     options:
         port: 5000
         hostname: 'localhost'
+        keepalive: true
         livereload: true
 
     development:
